@@ -1,0 +1,628 @@
+
+/****************************************************************************/
+/* BASIC SETUP */
+/****************************************************************************/
+*{
+  margin: 0;
+  padding: 0;
+box-sizing: border-box;
+}
+html,body{
+  background-color: white;
+  color: #555;
+  font-family: 'Lato','Arial',sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+.clearfix{
+  zoom:1;
+}
+.clearfix::after{
+  content: ".";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+/****************************************************************************/
+/* REUSABLE COMPONENTS */
+/****************************************************************************/
+.row{
+  max-width: 1140px;
+  margin: 0 auto;
+}
+section{
+  padding: 80px 0;
+}
+.box{
+  padding: 1%;
+}
+/*************HEADINGS*****************/
+
+h1,h2,h3
+{
+  font-weight: 700;
+  /* text-transform: uppercase; */
+
+}
+
+h1
+{
+  margin-top: 0;
+  margin-bottom:20px;
+  color: black;
+  font-size: 200%;
+  /* 200% of 20px(defined in html{}) i.e, 40px*/
+  word-spacing: 4px;
+  letter-spacing: 1px;
+}
+h2
+{
+  font-size: 180%;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+h3{
+  font-size:150%;
+  margin-bottom: 15px;
+}
+
+h2::after{
+  display: block;
+  height: 2px;
+  background-color: rgb(250, 56, 138);
+  content: " ";
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+/*************PARAGRAPHS*****************/
+.long-copy{
+  line-height: 145%;
+  width: 70%;
+  margin-left: 15%;
+}
+
+.box p{
+  font-size: 90%;
+  line-height: 145%;
+
+}
+
+
+/*************ICONS*****************/
+.icon-big{
+  color: rgb(250, 56, 138);
+  font-size: 350%;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.icon-small{
+  color:rgb(250, 56, 138);
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  font-size: 120%;
+  margin-right: 10px;
+  /* secret to align text and icon */
+  line-height: 120%;
+  vertical-align: middle;
+  margin-top: -4px;
+
+}
+
+
+/*************LINKS*****************/
+a:link,a:visited{
+  text-decoration: none;
+  color: rgb(250, 56, 138);
+  border-bottom: 1px solid rgb(250, 56, 138);
+  padding-bottom: 1px;
+  transition: 0.2s;
+}
+a:hover,a:active{
+  color: #555;
+  border-bottom: 1px solid transparent;
+}
+
+
+/*************BUTTON*****************/
+.btn:link,.btn:visited,input[type=submit]{
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 300;
+  text-decoration: none;
+  color: #ffff;
+  border-radius: 200px;
+  transition: 0.2s;
+}
+
+.btn-full:link,.btn-full:visited,input[type=submit]{
+  background-color: rgb(250, 56, 138);
+  border: 1px solid rgb(250, 56, 138);
+  color: #ffff;
+  margin-right: 15px;
+}
+.btn-ghost:link,.btn-ghost:visited{
+  border: 1px solid rgb(250, 56, 138);
+  color: rgb(250, 56, 138);
+}
+.btn:hover,.btn:active,input[type="submit"]:hover,input[type="submit"]:active{
+  background-color: rgb(250, 56, 138);
+}
+.btn-full:hover,.btn-full:active{
+  border: 1px solid  rgb(250, 56, 138);
+}
+.btn-ghost:hover,.btn-ghost:active{
+  border: 1px solid  rgb(250, 56, 138);
+  color: #ffff;
+}
+.link-button{
+  background-color: #ff79b0; /* For browsers that do not support gradients */
+  background-image: linear-gradient(90deg,#ff79b0,#c67cd7);
+  color: white;
+  border: 0;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  padding: 11px 8px;
+  font-size: 80%;
+  width: 25%;
+}
+/************************************************************/
+/**HEADER SECTION**/
+/************************************************************/
+
+header{
+  background-image: url(https://static.meeshosupply.com/web/images/hero-image-landing.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: black;
+
+}
+.hero-text-box{
+  position: absolute;
+  width: 50%;
+  top: 40%;
+  left: 30%;
+  transform: translate(-45%,-10%);
+  color: black;
+  font-weight: 400;
+}
+.below{
+  margin-top: 50px;
+}
+.below-header{
+  margin-top: 20px;
+  width: 80%;
+}
+
+.std-code{
+  display: inline-block;
+  width: 10%;
+  height: 40px;
+  border: 1px solid rgb(154, 164, 158);
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  float: left;
+  padding: 5px;
+  font-size: 90%;
+}
+.below-header-input{
+  height: 40px;
+  display: inline-block;
+  font-size: 60%;
+  width: 59%;
+  border: 1px solid rgb(154, 164, 158) ;
+  float: left;
+  padding: 4px;
+}
+.buttons_header{
+  color: white;
+  margin-top: 40px;
+}
+.buttons_header button{
+  background-color: black;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+.hero-text-box p{
+  color: rgb(154, 164, 158) ;
+}
+.logo{
+  height: 40px;
+  width: auto;
+  float: left;
+  margin-top: 20px;
+}
+.logo-black{
+  display: none;
+  height: 40px;
+  width: auto;
+  float: left;
+  margin: 5px;
+}
+nav{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding-bottom: 10px;
+}
+/* main nav */
+.main-nav{
+  float: right;
+  list-style: none;
+  margin-top: 35px;
+}
+.main-nav li{
+  display: inline-block;
+  margin-left: 40px;
+}
+.main-nav li a:link,.main-nav li a:visited{
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 90%;
+  border: 1px solid transparent;
+  transition: 0.2s;
+}
+.main-nav li a:hover,.main-nav li a:active{
+  border-bottom: 2px solid  rgb(250, 56, 138);
+  padding: 8px 0;
+}
+/* Mobile navi */
+.mobile-nav-icon {
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;
+    display: none;
+}
+.mobile-nav-icon i {
+    font-size: 200%;
+    color: black;
+}
+
+/* sticky nav */
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 2px #efefef;
+    z-index: 9999;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-bottom: 10px;
+}
+
+.sticky .main-nav { margin-top: 18px; }
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    padding: 8px 0;
+    color: #555;
+}
+.sticky .main-nav li a:hover,
+.sticky .main-nav li a:active {
+  border-bottom: 2px solid  rgb(250, 56, 138);
+
+}
+
+.sticky .logo { display: none; }
+.sticky .logo-black { display: block; }
+
+/************************************************************/
+/**FACEBOOK SECTION**/
+/************************************************************/
+.facebook-1{
+  padding: 10px;
+}
+.facebook-2{
+  padding: auto;
+  text-align: center;
+}
+.facebook-2 button{
+  margin-top: 10px;
+}
+.sub-button{
+    margin-top: 60px;
+}
+
+
+/************************************************************/
+/**INCOME SECTION**/
+/************************************************************/
+.income{
+  padding: 0 2%;
+  text-align: left;
+  background-image: url(https://static.meeshosupply.com/web/images/growth-bg.jpg);
+  background-repeat: no-repeat;
+  height: 900px;
+  background-position: 50% 100%;
+  background-size: contain;
+
+
+}
+.income img{
+  float: left;
+  height:80px;
+}
+/* .cont2{
+  margin: 0;
+} */
+.cont{
+  width: 55%;
+  margin: 0;
+  margin-bottom: 45px;
+}
+.btn-app:link, .btn-app:visited{
+  border: 0;
+
+}
+
+.btn-app img{
+  height: 50px;
+  width: auto;
+  margin-right: 10px;
+}
+
+
+/************************************************************/
+/**RESELLING SECTION**/
+/************************************************************/
+.reselling{
+  line-height: 170%;
+  font-size: 90%;
+}
+.reselling h3{
+  margin-bottom: 25px;
+}
+hr{
+  margin-top: 20px;
+  width:30px;
+  height:2px;
+  background-image: linear-gradient(90deg,#ff79b0,#c67cd7);
+}
+.how-to-video{
+  margin-top: 50px;
+  text-align: center;
+
+}
+.reselling img{
+  width: 600px;
+  height: 350px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/************************************************************/
+/**DREAM SECTION**/
+/************************************************************/
+
+.dreams{
+  background-image: url("https://static.meeshosupply.com/web/images/dreams_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: black;
+  line-height: 170%;
+}
+.dreams h3{
+  color: #424242;
+}
+.dreams p{
+  color: #333;
+}
+.dreams-cont{
+  float: right;
+}
+
+
+/************************************************************/
+/**HOW IT WORKS SECTION**/
+/************************************************************/
+
+.section-steps{
+  background-color: #f4f4f4;
+  background-image: url(https://static.meeshosupply.com/web/images/phone-download-bg.png);
+  background-size: 300px;
+  background-repeat: no-repeat;
+  background-position: 95% 60%;
+  padding: 90px 0;
+}
+.section-steps p{
+  margin-bottom: 50px;
+}
+.section-steps div{
+  margin-bottom: 20px;
+}
+.btn-app:link, .btn-app:visited{
+  border: 0;
+}
+
+.btn-app img{
+  height: 60px;
+  width: auto;
+  margin-right: 10px;
+}
+
+
+/************************************************************/
+/**IN THE NEWS SECTION**/
+/************************************************************/
+.people-resell{
+
+}
+.people-resell img{
+  max-width: 100%;
+}
+.people-resell p{
+  margin-bottom: 30px;
+}
+
+
+/************************************************************/
+/**SLIDE SECTION**/
+/************************************************************/
+
+.slide-section img{
+  max-width: 100%;
+}
+/************************************************************/
+/**IN THE NEWS SECTION**/
+/************************************************************/
+.news img{
+  max-width: 100%;
+}
+.news .col:first-child{
+  margin: 3px;
+}
+.news .col{
+  margin: 3px;
+}
+
+/************************************************************/
+/**FORM SECTION**/
+/************************************************************/
+.contact-form{
+  width: 60%;
+  /* way-2 to center element */
+  margin: 0 auto;
+}
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+textarea{
+  height: 100px;
+}
+input[type=checkbox]{
+  margin: 10px 5px 10px 0;
+}
+*:focus {outline: none;}
+
+/************************************************************/
+/**FOOTER SECTION**/
+/************************************************************/
+
+footer{
+  background-color: #333;
+  background-image: linear-gradient(90deg,#ff79b0,#c67cd7);
+  color: white;
+  padding: 50px;
+  font-size: 80%;
+}
+
+footer h3{
+  margin-bottom: 15px;
+}
+.footer-nav li{
+  /* display: inline-block; */
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+.footer-nav li:last-child,.social-icons li:last-child{
+  margin: 0;
+
+}
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-icons li a:link,
+.social-icons li a:visited {
+    text-decoration: none;
+    border: 0;
+    color: white;
+    transition: color 0.2s;
+}
+.footer-nav li a:hover,
+.footer-nav li a:active {
+    color: #ddd;
+}
+.social-icons li{
+  display: inline-block;
+  margin-right: 15px;
+}
+.social-icons li a:link,
+.social-icons li a:visited {
+    font-size: 190%;
+}
+
+
+.ion-social-facebook,
+.ion-social-twitter,
+.ion-social-googleplus,
+.ion-social-instagram {
+    transition: color 0.2s;
+}
+
+.ion-social-facebook:hover {
+    color: #3b5998;
+}
+
+.ion-social-twitter:hover {
+    color: #00aced;
+}
+
+.ion-social-googleplus:hover {
+    color: #dd4b39;
+}
+
+.ion-social-instagram:hover {
+    color: #517fa4;
+}
+footer .logoo{
+  display: block;
+  height: 60px;
+  margin-top: 20px;
+}
+
+footer p {
+    color: white;
+    margin-top: 20px;
+}
+.copy {
+  text-align: center;
+    float: right;
+  }
+footer hr{
+  color: white;
+  width: 100%;
+  margin: 20px auto;
+  height: 0px;
+  background-image: none;
+}
+
+/* ----------------------------------------------- */
+/* Animations */
+/* ----------------------------------------------- */
+
+.js--wp-1,
+.js--wp-2,
+.js--wp-3
+{
+    opacity: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.js--wp-4 {
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+}
+
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated {
+    opacity: 1;
+}
+}
